@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Convite de Aniversário</title>
+  <style>
+    body {
+      /* background: linear-gradient(135deg, #fceabb, #f8b500); */
+      background-image: url("ratim.jpg");
+      background-size: 345px; 
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background-color: #e68e0a;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #79270e;
+    }
+
+    .card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      display: none;
+    }
+
+    .card.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card h1 {
+      font-size: 2.5em;
+      color: #ff7f50;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      font-size: 1.5em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .card p {
+      font-size: 1.1em;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .balloons {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="mostrarConvite()">Abrir Convite 🎉</button>
+
+  <div class="card" id="convite">
+    <div class="balloons">🎈🎉🎁</div>
+    <h1>Você está convidado!</h1>
+    <h2>Aniversário da sofrida</h2>
+    <p><strong>Data:</strong> 21 de Junho de 2025</p>
+    <p><strong>Horário:</strong> 19h00</p>
+    <p><strong>Local:</strong> Budega dos Pinhões - Praça Visconde de Pelotas, 42 - Centro </p>
+    <p>Segue em anexo a lista de pessoas proibidas!</p>
+    <ul>
+        <li>Charles Bruno</li>
+        <li>Ronalice</li>
+        <li>Ronalice dnv</li>
+    </ul>
+    
+    <div class="footer">
+      Confirme sua presença até 15/07 📞 (11) 99999-0000
+    </div>
+  </div>
+
+  <script>
+    function mostrarConvite() {
+      const card = document.getElementById("convite");
+      card.style.display = "block";
+      setTimeout(() => {
+        card.classList.add("show");
+      }, 50); // dá tempo de ativar a transição
+    }
+  </script>
+
+</body>
+</html>
